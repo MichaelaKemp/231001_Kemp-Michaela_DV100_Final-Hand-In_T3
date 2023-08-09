@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinister Solace: Home</title>
+    
+    
+    <!--Internal Documents-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class = "logo">
+            <a href = "index.html"><img src = "../assets/Logo.jpeg"  alt = "logo" width = "70px"></a>
+        </div>
+        
+        <div class= "name">
+            <h4>
+                Sinister Solace
+            </h4>
+        </div>
+    
+        <div class = "nav-con">
+            <ul>
+                <a href = "../index.html"><li> Home </li></a>
+                <a><li class = "currentActive"> Book a Trip! </li></a>
+                <a href = "check.html"><li> Check Out </li></a>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 pt-5">
+        
+        <h1>Browse Trips</h1>
+
+        <div class="row py-5 gy-3" id="tripsContainer">
+
+            <template id="tripCardTemplate">
+                <div class="col-4">
+
+                    <div class="card">
+                        <img src="../assets/culinary-cruise.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title" id="titleText">Tropical Island Getaway</h4>
+                        <p class="card-text mt-4" id="descriptionText">Escape to a paradise island with white sandy beaches, turquoise waters, and vibrant marine life.</p>
+                    </div>
+                </div>
+              </div>
+            </template>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- Include your main.js script -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
+
+
