@@ -23,6 +23,13 @@ h1
     color: #dfc56e;
 }
 
+h3
+{
+    padding-left: 100px;
+    padding-top: 100px;
+    color: #dfc56e;
+}
+
 .nav-con
 {
     width: 430px;
@@ -125,4 +132,11 @@ h1
 
 .card-text {
     color: #18382B;
+}
+
+.weather-info
+{
+    color: white;
+    padding-top: 50px;
+    padding-left: 100px;
 }

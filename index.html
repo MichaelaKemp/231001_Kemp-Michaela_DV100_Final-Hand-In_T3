@@ -11,7 +11,7 @@
 
 </head>
     
-<body>
+<body onload = "fetchWeatherData()">
     <nav>
         <div class = "logo">
             <a href = "index.html"><img src = "assets/Logo.jpeg"  alt = "logo" width = "70px"></a>
@@ -35,6 +35,11 @@
     <header>
 
     </header>
+
+    <h3> Current Weather in Hawaii:</h3>
+    <div id="weather-info"  class = "weather-info">
+      <p>Loading weather data...</p>
+    </div>
 
     <div id="carouselExample" class="carousel carousel-dark slide">
       <div class="carousel-inner">

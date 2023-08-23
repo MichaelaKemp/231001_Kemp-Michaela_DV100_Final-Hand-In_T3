@@ -62,5 +62,41 @@ $("#tripsContainer").on('click', '.card', function(){
   $(document).ready(function() {
     $(document).on('click', '.remove-btn', function() {
       $(this).closest('tr').remove()
-    })
   })
+})
+
+
+const apiKey = 'b73f8e3db1c599098be8abfd8c45427d1';
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Hawaii&appid=${apiKey}&units=metric`;
+
+const weatherInfoDiv = document.getElementById('weather-info');
+
+async function fetchWeatherData() {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    
+    if (data.weather && data.weather.length > 0) {
+      displayWeatherData(data);
+    } else {
+      weatherInfoDiv.innerHTML = '<p>No weather data available</p>';
+    }
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+    weatherInfoDiv.innerHTML = '<p>Error fetching weather data</p>';
+  }
+}
+
+function displayWeatherData(data) {
+  const weatherDescription = data.weather[0].description;
+  const temperature = data.main.temp;
+  const humidity = data.main.humidity;
+
+  const weatherHTML = `
+    <p>Weather: ${weatherDescription}</p>
+    <p>Temperature: ${temperature}°C</p>
+    <p>Humidity: ${humidity}%</p>
+  `;
+
+  weatherInfoDiv.innerHTML = weatherHTML;
+}
