@@ -7,12 +7,13 @@
     
     
     <!--Internal Documents-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 
 </head>
-<body>
+<body  onload = "displayPurchasedTickets()">
     <nav>
         <div class = "logo">
             <a href = "index.html"><img src = "../assets/Logo.jpeg"  alt = "logo" width = "70px"></a>
@@ -34,9 +35,77 @@
     </nav>
 
     <header>
-
-            
+        <p>
+            As you reach the checkout page, you're one step closer to setting sail on your dream cruise. Here, you can review your selected cruise package, ensuring it matches your preferences and travel dates. Feel confident in your choices as you proceed to confirm your booking. Enter your payment details securely, and our user-friendly interface makes the process a breeze. Rest assured that your voyage is in good hands, and you'll soon receive a confirmation of your reservation. Prepare to pack your bags and embark on an unforgettable journey with our cruise liner.
+        </p>
     </header>
+
+    <h3>
+        Your Purchases
+    </h3>
+
+    <button class="remove-all-btn" onclick="removeAllRows()">Remove All</button>
+
+    <div class="container">
+        <table class="table table-bordered" id = "table">
+          <thead>
+            <tr>
+              <th>Trip Code</th>
+              <th>Ticket Quantity</th>
+              <th>Total Cost</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+      <button onclick = "purchase()">Purchase Tickets</button>
+
+
+         <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Contact Us</h4>
+                  <p>If you have any questions or need assistance, feel free to contact our customer support team. We're here to help!</p>
+                  <ul class="contact-info">
+                      <li><i class="fas fa-map-marker-alt"></i> 123 Ocean Drive, Paradise Island</li>
+                      <li><i class="fas fa-phone"></i> Phone: +1-123-456-7890</li>
+                      <li><i class="fas fa-envelope"></i> Email: info@cruiseliners.com</li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <h4>Quick Links</h4>
+                  <ul class="quick-links">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="pages/book.html">Book a Trip</a></li>
+                      <li><a href="pages/check.html">Check Out</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <h4>Follow Us</h4>
+                  <p>Stay connected with us on social media to receive updates, special offers, and travel inspiration.</p>
+                  <ul class="social-icons">
+                      <li><a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fab fa-facebook-f">Facebook</i></a></li>
+                      <li><a href="https://twitter.com/home?lang=en"><i class="fab fa-twitter"></i>Twitter</a></li>
+                      <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a></li>
+                      <li><a href="https://za.pinterest.com"><i class="fab fa-pinterest"></i>Pinterest</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="bottom-footer">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <p>&copy; 2023 Cruise Liners. All Rights Reserved.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
     
 </body>
 </html>

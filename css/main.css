@@ -25,9 +25,32 @@ h1
 
 h3
 {
+    width: 500px;
     padding-left: 100px;
     padding-top: 100px;
     color: #dfc56e;
+}
+
+h6
+{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 100px;
+    color: white;
+}
+
+header p
+{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    color: white;
+}
+
+footer
+{
+ color: white;
+ padding-top: 50px;
 }
 
 .nav-con
@@ -69,13 +92,6 @@ h3
     border-bottom: 2px solid #dfc56e;
 }
 
-.logo img
-{
-    float: left;
-    padding-right: 5px;
-    border-radius: 100%;
-    margin-top: 10px;
-}
 
 .name
 {
@@ -114,7 +130,7 @@ h3
     border-radius: 12px;
     background: lightgray;
     text-align: center;
-    height: 440px;
+    height: 500px;
     border: none;
 }
 
@@ -127,7 +143,7 @@ h3
 }
 
 .card-img-top.small {
-    height:200px;
+    height:100px;
 }
 
 .card-text {
@@ -139,4 +155,52 @@ h3
     color: white;
     padding-top: 50px;
     padding-left: 100px;
+}
+
+.table
+{
+    margin-left: 200px;
+    margin-top: 150px;
+    width: 900px;
+    text-align: center;
+    color: white;
+}
+
+
+.accordion-content {
+    display: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.accordion.active .accordion-content
+{
+    display: block;
+}
+
+.accordion-button {
+    background-color: #f4f4f4;
+    border: none;
+    text-align: left;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+  .logo img
+{
+    float: left;
+    padding-right: 5px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+.logo
+{
+    transition: transform 0.3s
+}
+
+.logo :hover
+{
+    transform: scale(1.1);
 }

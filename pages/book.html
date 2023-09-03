@@ -5,56 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinister Solace: Home</title>
     
-    
-    <!--Internal Documents-->
+    <!-- Internal Documents -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-
 </head>
 <body>
     <nav>
-        <div class = "logo">
-            <a href = "index.html"><img src = "../assets/Logo.jpeg"  alt = "logo" width = "70px"></a>
+        <div class="logo">
+            <a href="index.html"><img src="../assets/Logo.jpeg" alt="logo" width="70px"></a>
         </div>
-        
-        <div class= "name">
-            <h4>
-                Sinister Solace
-            </h4>
+        <div class="name">
+            <h4>Sinister Solace</h4>
         </div>
-    
-        <div class = "nav-con">
+        <div class="nav-con">
             <ul>
-                <a href = "../index.html"><li> Home </li></a>
-                <a><li class = "currentActive"> Book a Trip! </li></a>
-                <a href = "check.html"><li> Check Out </li></a>
+                <a href="../index.html"><li>Home</li></a>
+                <a><li class="currentActive">Book a Trip!</li></a>
+                <a href="check.html"><li>Check Out</li></a>
             </ul>
         </div>
     </nav>
 
+    <h6>
+        Ready to embark on your dream cruise adventure? Our "Book a Trip" page is your gateway to crafting the perfect voyage. Choose from a selection of meticulously planned cruise packages tailored to your preferences. Whether you're looking for a romantic getaway, a family-friendly vacation, or thrilling ocean adventures, you'll find the ideal cruise here. Explore the various destinations, itineraries, and onboard amenities, and effortlessly reserve your spot for an experience like no other. Let our cruise liner be your ticket to a world of relaxation and exploration.
+    </h6>
 
     <div class="container mt-5 pt-5">
-        
         <h1>Browse Trips</h1>
+        <!-- Buttons for filtering trips by destinations -->
+    <button id="allDestinationsButton">All Destinations</button>
+    <button id="shortDurationButton">Short Duration Trips</button>
+    <button id="longDurationButton">Long Duration Trips</button>
+    <button id="singleDestinationButton">Single Destination</button>
+    <button id="multiDestinationsButton">Multi Destinations</button>
+    <button id="roundTripsButton">Round Trips</button>
+    <button id="rowBoatSpecialButton">Row Boat Special</button>
 
         <div class="row py-5 gy-3" id="tripsContainer">
-
             <template id="tripCardTemplate">
                 <div class="col-4">
-
                     <div class="card">
-                        <img src="../assets/culinary-cruise.jpeg" class="card-img-top" alt="...">
+                        <img src="../assets/{{image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h4 class="card-title" id="titleText">Tropical Island Getaway</h4>
-                        <p class="card-text mt-4" id="descriptionText">Escape to a paradise island with white sandy beaches, turquoise waters, and vibrant marine life.</p>
+                            <h4 class="card-title" id="titleText">{{title}}</h4>
+                            <p class="card-text mt-4" id="destinationText">{{destination}}</p>
+                            <p class="card-text mt-4" id="descriptionText">{{description}}</p>
+                            <p class="card-text mt-4" id="durationText">{{duration}}</p>
+                            <p class="card-text mt-4" id="priceText">{{ Price}}</p>
+
+                            <button class="ticket" id = "ticket" data-trip-id="{{tripCode}}" data-original-text="Purchase Ticket">Purchase Ticket</button>
+                        </div>
                     </div>
                 </div>
-              </div>
             </template>
         </div>
     </div>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
@@ -62,9 +68,51 @@
     <!-- Include jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
+
     <!-- Include your main.js script -->
     <script src="../scripts/main.js"></script>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>If you have any questions or need assistance, feel free to contact our customer support team. We're here to help!</p>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Ocean Drive, Paradise Island</li>
+                        <li><i class="fas fa-phone"></i> Phone: +1-123-456-7890</li>
+                        <li><i class="fas fa-envelope"></i> Email: info@cruiseliners.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/book.html">Book a Trip</a></li>
+                        <li><a href="pages/check.html">Check Out</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <p>Stay connected with us on social media to receive updates, special offers, and travel inspiration.</p>
+                    <ul class="social-icons">
+                        <li><a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fab fa-facebook-f">Facebook</i></a></li>
+                        <li><a href="https://twitter.com/home?lang=en"><i class="fab fa-twitter"></i>Twitter</a></li>
+                        <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://za.pinterest.com"><i class="fab fa-pinterest"></i>Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 Cruise Liners. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
-
