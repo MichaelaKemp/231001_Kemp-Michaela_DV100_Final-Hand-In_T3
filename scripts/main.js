@@ -73,8 +73,6 @@ $(document).ready(function () {
     headerName.textContent = 'Welcome to Sinister Solace'
 });
 
-
-
 $("#allDestinationsButton").on("click", function () {
   const filteredTrips = cruiseTripItems;
   loadFilteredTrips(filteredTrips);
